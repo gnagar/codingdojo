@@ -3,6 +3,7 @@ package in.co.appworks;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class BowlingGameTest {
@@ -65,6 +66,13 @@ public class BowlingGameTest {
 	
 	@Test
 	public void testPerfectGame() throws Exception {
+		rollMany(12, 10);
+		assertEquals(300, testGame.score());
+	}
+	
+	@Test
+	@Ignore
+	public void anExampleOfIgnoredTest() throws Exception {
 		rollMany(12, 10);
 		assertEquals(300, testGame.score());
 	}
